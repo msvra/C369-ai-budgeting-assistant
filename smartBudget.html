@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/smartBudget.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Smart Budget</h1>
+        </div>
+        <div class="budget-form">
+            <h2>Enter your budget for different categories</h2>
+            <input type="number" id="food" placeholder="Food Budget">
+            <input type="number" id="clothes" placeholder="Clothes Budget">
+            <input type="number" id="makeup" placeholder="Makeup Budget">
+            <input type="number" id="groceries" placeholder="Groceries Budget">
+            <button onclick="calculateBudget()">Submit</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="budgetChart"></canvas>
+        </div>
+        <div>
+            <table id="budgetTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Budget</th>
+                        <th>Percentage Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Food</td>
+                        <td id="foodBudget"></td>
+                        <td id="foodUsed"></td>
+                    </tr>
+                    <tr>
+                        <td>Clothes</td>
+                        <td id="clothesBudget"></td>
+                        <td id="clothesUsed"></td>
+                    </tr>
+                    <tr>
+                        <td>Makeup</td>
+                        <td id="makeupBudget"></td>
+                        <td id="makeupUsed"></td>
+                    </tr>
+                    <tr>
+                        <td>Groceries</td>
+                        <td id="groceriesBudget"></td>
+                        <td id="groceriesUsed"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="smartBudget.js"></script>
+</body>
+</html>

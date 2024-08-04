@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #b3e5fc, #ffccbc);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+.progress-container {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.gauge {
+    width: 150px;
+    height: 75px;
+    border-radius: 150px 150px 0 0;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    position: relative;
+}
+
+.needle {
+    width: 2px;
+    height: 75px;
+    background-color: #ff5a5f;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: bottom center;
+    transform: rotate(45deg);
+}
+
+.progress-info {
+    margin-top: 20px;
+}
+
+.goal, .saved {
+    display: inline-block;
+    width: 50%;
+    font-size: 18px;
+}
+
+.details, .transactions {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.details h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.buttons a:hover {
+    background-color: #0056b3;
+}

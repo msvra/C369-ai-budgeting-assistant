@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSave</title>
+    <link rel="stylesheet" href="CSS/cashOut.css">
+</head>
+<body>
+    <div class="cash-out">
+        <form id="cashOutForm">
+            <label for="card">Select Credit Card:</label>
+            <select id="card" name="card">
+                <option value="saved">Use Saved Card (**** **** **** 1234)</option>
+                <option value="new">Use New Card</option>
+            </select>
+            <div id="newCardDetails" style="display: none;">
+                <label for="newCardNumber">New Card Number:</label>
+                <input type="text" id="newCardNumber" name="newCardNumber" placeholder="Enter new card number">
+                <label for="expiry">Expiry date:</label>
+                <input type="date" id="expiry" name="expiry" placeholder="Enter the expiry date">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter the card's CVV number">
+            </div>
+            <button type="submit" class="cash-out-button">Cash Out</button>
+            <a href="smartSave.html" class="back">Back</a>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById('card').addEventListener('change', function () {
+        if (this.value === 'new') {
+            document.getElementById('newCardDetails').style.display = 'block';
+        } else {
+            document.getElementById('newCardDetails').style.display = 'none';
+        }
+    });
+
+    document.getElementById('cashOutForm').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        
+        const cardSelection = document.getElementById('card').value;
+        let cardNumber = '';
+        
+        if (cardSelection === 'new') {
+            
+            cardNumber = document.getElementById('newCardNumber').value;
+        } else {
+            
+            cardNumber = '**** **** **** 1234';
+        }
+
+        
+        const balance = localStorage.getItem('balance') || '0.00';
+
+        
+        alert(`You successfully cashed out $${balance} into the card number ${cardNumber}.`);
+    });
+    </script>
+</body>
+</html>

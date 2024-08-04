@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Money</title>
+    <link rel="stylesheet" href="CSS/addM.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Good afternoon</h1>
+        </div>
+        <div class="balance-section">
+            <div class="balance-header">
+                <h2>Savings</h2>
+            </div>
+            <p class="balance">$8500</p>
+            <button class="transfer-button" onclick="openPinpad()">Add Money</button>
+            <div class="funds-message">
+                <p>Choose any amount you would like to add into your savings!</p>
+                <a href="smartSave.html" class="funds-link">Back</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="pinpad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closePinpad()">&times;</span>
+            <h2>Enter Amount</h2>
+            <input type="text" id="amount-input" placeholder="Enter amount" />
+            <button onclick="addAmount()">Add</button>
+        </div>
+    </div>
+
+    
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeConfirmation()">&times;</span>
+            <h2>Confirmation</h2>
+            <p id="confirmation-message"></p>
+            <button onclick="closeConfirmation()">OK</button>
+        </div>
+    </div>
+
+    <script src="addM.js"></script>
+</body>
+</html>
